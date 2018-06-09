@@ -1,0 +1,22 @@
+	{% extends 'layout.html' %}
+
+	{% block body %}
+  	<h1>{{name}}</h1>
+		{% from "includes/builder_helpers.html" import render_field %}
+		{% for field in fields %}
+			<form method="POST" action="">
+				<ul class="list-group">
+	  			  <li class="list-group-item">{{field.field_label}}:</li>
+				<ul>
+				<div class="form-group">
+					{{render_field(form.ans, class_="form-control")}}
+				</div>
+				<p><input type="submit" class="btn btn-primary" value="Submit Answer"></p>
+			</form>
+		{% endfor %}
+				<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav">
+				  <li><a href="/">FINISH</a></li>
+	        		</ul>
+				</div>
+	{% endblock %}

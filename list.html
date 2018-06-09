@@ -1,0 +1,14 @@
+	{% extends 'layout.html' %}
+
+	{%block body %}
+	  <h1>Forms</h1>
+	  <ul class="list-group">
+	   {% for form in forms %}
+	    <li class="list-group-item">Form id: {{form.id}}</li>
+            <li class="list-group-item">Form name: {{form.form_name}}</li>
+	    <li class="list-group-item"># Submissions: {{form.submissions}}</li>
+	    <li class="list-group-item"><a href="list/{{form.form_name}}">Submit Page: View</li>
+	    <li class="list-group-item"><a href="submission/{{form.form_name}}">Submissions Page: View</li>
+	   {%endfor%}
+	  </ul>
+	{%endblock%}

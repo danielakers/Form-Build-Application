@@ -1,0 +1,12 @@
+	{% extends 'layout.html' %}
+
+	{%block body %}
+	  <h1>Forms</h1>
+	  <ul class="list-group">
+	   {% for form in forms %}
+	    <li class="list-group-item">{{form.form_id}}</li>
+            <li class="list-group-item">{{form.form_name}}</li>
+	    <li class="list-group-item"><a href="/submit">View</li>
+	   {%endfor%}
+	  </ul>
+	{%endblock%}

@@ -1,0 +1,23 @@
+	{% extends 'layout.html' %}
+
+	{%block body %}
+	  <h1>Build Form</h1>
+	  {% from "includes/builder_helpers.html" import render_field %}
+	  <form method="POST" action="">
+		<div class="form-group">
+		  {{render_field(form.field_label, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		  {{render_field(form.input_name, class_="form-control")}}
+		</div>
+		<div class="form-group">
+		  {{render_field(form.input_type, class_="form-control")}}
+		</div>
+	       <p><input type="submit" class="btn btn-primary" value="Add Field"></p>
+		<div id="navbar" class="collapse navbar-collapse">
+        	<ul class="nav navbar-nav">
+		  <li><a href="/finish">FINISH</a></li>
+        	</ul>
+     	        </div>
+	</form>
+	{%endblock%}
