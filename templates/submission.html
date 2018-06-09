@@ -1,0 +1,11 @@
+	{% extends 'layout.html' %}
+
+	{%block body %}
+	  <h1>Submissions for {{name}} Form</h1>
+	  <ul class="list-group">
+	   {% for form in forms %}
+	    <li class="list-group-item">Field Label: {{form.field_label}}</li>
+	    <li class="list-group-item"># Answer: {{form.answer}}</li>
+	   {%endfor%}
+	  </ul>
+	{%endblock%}

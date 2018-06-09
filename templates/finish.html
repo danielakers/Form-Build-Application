@@ -1,0 +1,28 @@
+	{% extends 'layout.html' %}
+
+	{%block body %}
+	  <h1>Set Form Name</h1>
+	  {% from "includes/builder_helpers.html" import render_field %}
+	  <form method="POST" action="">
+		<div class="form-group">
+		  {{render_field(form.name, class_="form-control")}}
+		</div>
+	       <p><input type="submit" class="btn btn-primary" value="Submit Form"></p>
+		
+	</form>
+	{%endblock%}
+cur = mysql.connection.cursor()
+mysql_select_db('hrmwaitrose');
+
+query = "SELECT * FROM fields"
+result = mysql_query($query);
+
+echo "<table>"=
+
+while($row = mysql_fetch_array($result)){   //Creates a loop to loop through results
+	echo "<tr><td>" . $row['field_label'] . "</td><td>" . $row['input_name'] . "</td></tr>";  //$row['index'] the index here is a field name
+}
+
+echo "</table>"
+
+cur.close()
