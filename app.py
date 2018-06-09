@@ -47,7 +47,7 @@ def submission(name):
 		return render_template('submission.html', forms = Submissions, name=name)
 	else:
 		msg = 'No Forms Created Yet'
-		return render_template('list.html', msg=msg)
+		return render_template('submission.html', msg=msg)
 
 	cur.close()
 
