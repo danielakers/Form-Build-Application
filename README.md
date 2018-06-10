@@ -3,7 +3,7 @@ assignment for Wix
 
 The Server is written in python. The website was made using flask.
 
-To run the app, you need to run the server in the terminal(python app.py), and then open localhost:5000 in you browser.
+To run the app, you need to run the server in the terminal, first install flask: pip install flask, then run: python app.py, and then open localhost:5000 in you browser.
 
 Unfourtantley there a some rejections I didn't fix yet:
 
